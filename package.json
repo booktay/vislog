@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^3.0.1",
     "@material-ui/icons": "^3.0.1",
+    "echarts": "^4.1.0",
     "echarts-for-react": "^2.0.14",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

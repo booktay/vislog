@@ -92,6 +92,7 @@ const styles = theme => ({
 	},
 	card: {
 		minWidth: 275,
+		marginBottom: '1em',
 	},
 });
 
@@ -156,6 +157,7 @@ class App extends Component {
 						<List>{menu}</List>
 					</Drawer>
 					<main className={classes.content}>
+						<div className={classes.appBarSpacer} />
 						<Routing />
 					</main>
 				</div>

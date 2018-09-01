@@ -62,7 +62,6 @@ function SimpleTable(props) {
 
     return (
         <React.Fragment >
-            <div className={classes.appBarSpacer} />
             <Card className={classes.card}>
                 <Typography variant="headline" component="h2" align="center" color="inherit" noWrap className={classes.title}>
                     Indo
