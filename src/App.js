@@ -151,7 +151,7 @@ class App extends Component {
 						open={this.state.open}
 					>
 						<div className={classes.toolbarIcon}>
-							<Typography variant="h6" color="inherit" noWrap className={classes.title}>
+							<Typography variant="subheading" color="inherit" noWrap className={classes.title}>
 								2018-S1-01204427
                   			</Typography>
 							<IconButton onClick={this.handleDrawerClose}>

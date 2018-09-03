@@ -21,7 +21,7 @@ class ChartWk4 extends React.Component {
     getOption1 = () => {
         return {
             title: {
-                text: '1. HTTP Request per minute graph',
+                text: 'HTTP Request Timestamps',
             },
             tooltip: {
                 trigger: 'axis',
@@ -196,7 +196,7 @@ class ChartWk4 extends React.Component {
                         <ReactEcharts option={this.getOption1()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
                 </Card>
-                <Card className={classes.card}>
+                {/* <Card className={classes.card}>
                     <CardContent>
                         <ReactEcharts option={this.getOption2()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
@@ -205,7 +205,7 @@ class ChartWk4 extends React.Component {
                     <CardContent>
                         <ReactEcharts option={this.getOption3()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
-                </Card>
+                </Card> */}
             </React.Fragment >
         );
     }

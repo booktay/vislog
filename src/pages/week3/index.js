@@ -14,6 +14,20 @@ const styles = theme => ({
         minWidth: 275,
         marginBottom: '1em',
     },
+    cardhalf: {
+        width: '50%',
+        minWidth: 275,
+    },
+    cardhalfright: {
+        width: '50%',
+        minWidth: 275,
+        marginRight: '0.5em',
+    },
+    divhalf: {
+        display: 'inline-flex',
+        width: '100%',
+        marginBottom: '1em',
+    }
 });
 
 class ChartWk3 extends React.Component {
@@ -21,7 +35,7 @@ class ChartWk3 extends React.Component {
     getOption1 = () => {
         return {
             title: {
-                text: '1. Users in use per hour, day graph',
+                text: 'Users Timestamps',
             },
             tooltip: {
                 trigger: 'axis',
@@ -64,22 +78,22 @@ class ChartWk3 extends React.Component {
                 show: false,
                 dimension: 0,
                 pieces: [{
-                    lte: 6,
+                    lte: 21,
                     color: 'green'
                 }, {
-                    gt: 6,
-                    lte: 8,
+                    gt: 21,
+                    lte: 26,
                     color: 'red'
                 }, {
-                    gt: 8,
-                    lte: 14,
+                    gt: 26,
+                    lte: 29,
                     color: 'green'
                 }, {
-                    gt: 14,
-                    lte: 17,
+                    gt: 29,
+                    lte: 31,
                     color: 'red'
-                }, {
-                    gt: 17,
+                },{
+                    gt: 31,
                     color: 'green'
                 }]
             },
@@ -99,7 +113,7 @@ class ChartWk3 extends React.Component {
     getOption2 = () => {
         return {
             title: {
-                text: '2. IP usage per hour graph'
+                text: 'IP Usage Timestamps'
             },
             tooltip: {
                 trigger: 'axis'
@@ -162,7 +176,7 @@ class ChartWk3 extends React.Component {
     getOption3 = () => {
         return {
             title: {
-                text: '3. IP usage chart'
+                text: 'IP Usage'
             },
 
             tooltip: {
@@ -211,7 +225,7 @@ class ChartWk3 extends React.Component {
     getOption4 = () => {
         return {
             title: {
-                text: '4. Login/Logout Timestamp Graph'
+                text: 'Login/Logout Timestamps'
             },
             brush: {
                 toolbox: ['rect', 'polygon', 'lineX', 'lineY', 'keep', 'clear'],
@@ -264,7 +278,7 @@ class ChartWk3 extends React.Component {
     getOption5 = () => {
         return {
             title: {
-                text: '5. Agent IP (::ffff:158.108.218.XXX) Distribution Graph'
+                text: 'Agent IP (::ffff:158.108.218.XXX) Distribution'
             },
             angleAxis: {
                 type: 'category',
@@ -295,7 +309,7 @@ class ChartWk3 extends React.Component {
     getOption6 = () => {
         return {
             title: {
-                text: '6. User activities chart'
+                text: 'User Activities'
             },
 
             tooltip: {
@@ -347,9 +361,6 @@ class ChartWk3 extends React.Component {
         return (
             <React.Fragment >
                 <Card className={classes.card}>
-                    {/* <Typography variant="headline" component="h2" align="center" color="inherit" noWrap className={classes.title}>
-                        1. Users in use per hour, day graph
-                    </Typography> */}
                     <CardContent>
                         <ReactEcharts option={this.getOption1()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
@@ -359,11 +370,18 @@ class ChartWk3 extends React.Component {
                         <ReactEcharts option={this.getOption2()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
                 </Card>
-                <Card className={classes.card}>
-                    <CardContent>
-                        <ReactEcharts option={this.getOption3()} style={{ height: '34em', width: '100%' }} />
-                    </CardContent>
-                </Card>
+                <div className={classes.divhalf}>
+                    <Card className={classes.cardhalfright}>
+                        <CardContent>
+                            <ReactEcharts option={this.getOption3()} style={{ height: '34em', width: '100%' }} />
+                        </CardContent>
+                    </Card>
+                    <Card className={classes.cardhalf}>
+                        <CardContent>
+                            <ReactEcharts option={this.getOption6()} style={{ height: '34em', width: '100%' }} />
+                        </CardContent>
+                    </Card>
+                </div>
                 <Card className={classes.card}>
                     <CardContent>
                         <ReactEcharts option={this.getOption4()} style={{ height: '34em', width: '100%' }} />
@@ -372,11 +390,6 @@ class ChartWk3 extends React.Component {
                 <Card className={classes.card}>
                     <CardContent>
                         <ReactEcharts option={this.getOption5()} style={{ height: '34em', width: '100%' }} />
-                    </CardContent>
-                </Card>
-                <Card className={classes.card}>
-                    <CardContent>
-                        <ReactEcharts option={this.getOption6()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
                 </Card>
             </React.Fragment >
