@@ -9,23 +9,23 @@ import { Link } from 'react-router-dom'
 
 export const menu = (
     <div>
-        <ListItem button component={Link} to="/week1">
+        <ListItem button component={Link} to="/assignment1">
             <ListItemIcon>
                 <BubbleChartIcon />
             </ListItemIcon>
-            <ListItemText primary="Week 1" />
+            <ListItemText primary="Assignment1" />
         </ListItem>
-        <ListItem button component={Link} to="/week3">
+        <ListItem button component={Link} to="/assignment2">
             <ListItemIcon>
                 <BarChartIcon />
             </ListItemIcon>
-            <ListItemText primary="Week 3" />
+            <ListItemText primary="Assignment2" />
         </ListItem>
-        <ListItem button component={Link} to="/week4">
+        <ListItem button component={Link} to="/assignment3">
             <ListItemIcon>
                 <ChartIcon />
             </ListItemIcon>
-            <ListItemText primary="Week 4" />
+            <ListItemText primary="Assignment3" />
         </ListItem>
     </div>
 );

@@ -9,8 +9,8 @@ import Week4 from '../pages/week4'
 export default () => (
     <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/week1" component={Week1} />
-        <Route exact path="/week3" component={Week3} />
-        <Route exact path="/week4" component={Week4} />
+        <Route exact path="/assignment1" component={Week1} />
+        <Route exact path="/assignment2" component={Week3} />
+        <Route exact path="/assignment3" component={Week4} />
     </Switch>
 )

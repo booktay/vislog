@@ -13,7 +13,9 @@ import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import Button from '@material-ui/core/Button';
 import { menu } from './listItems';
+import { Link } from 'react-router-dom'
 import Routing from './routes/'
 
 const drawerWidth = 240;
@@ -152,7 +154,7 @@ class App extends Component {
 					>
 						<div className={classes.toolbarIcon}>
 							<Typography variant="subheading" color="inherit" noWrap className={classes.title}>
-								2018-S1-01204427
+								<Button className={classes.button} component={Link} to="/">2018-S1-01204427</Button>
                   			</Typography>
 							<IconButton onClick={this.handleDrawerClose}>
 								<ChevronLeftIcon />
