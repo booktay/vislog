@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import ReactEcharts from 'echarts-for-react';
+import echarts from 'echarts';
 
 const styles = theme => ({
     title: {
@@ -49,26 +50,51 @@ class ChartWk4 extends React.Component {
                     snap: true
                 }
             },
-            visualMap: {
-                show: false,
-                dimension: 0,
-                pieces: [{
-                    lte: 6,
-                    color: 'green'
-                }, {
-                    gt: 6,
-                    lte: 8,
-                    color: 'red'
-                }, {
-                    gt: 8,
-                    color: 'green'
-                }]
-            },
+            dataZoom: [{
+                type: 'inside',
+                start: 0,
+                end: 10
+            }, {
+                start: 0,
+                end: 10,
+                handleIcon: 'M10.7,11.9v-1.3H9.3v1.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4v1.3h1.3v-1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7V23h6.6V24.4z M13.3,19.6H6.7v-1.4h6.6V19.6z',
+                handleSize: '80%',
+                handleStyle: {
+                    color: '#fff',
+                    shadowBlur: 3,
+                    shadowColor: 'rgba(0, 0, 0, 0.6)',
+                    shadowOffsetX: 2,
+                    shadowOffsetY: 2
+                }
+            }],
             series: [
                 {
                     name: 'User',
                     type: 'line',
                     smooth: true,
+                    symbol: 'none',
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: 'Max' },
+                        ]
+                    },
+                    sampling: 'average',
+                    itemStyle: {
+                        normal: {
+                            // color: 'rgb(255, 70, 131)'
+                        }
+                    },
+                    areaStyle: {
+                        normal: {
+                            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                offset: 0,
+                                color: 'rgb(68, 186, 255)'
+                            }, {
+                                offset: 1,
+                                color: 'rgb(47, 100, 206)'
+                            }])
+                        }
+                    },
                     data: [5790, 5193, 6195, 5829, 5839, 6253, 5736, 8454, 5447, 5235, 5630, 6138, 5411, 5510, 5101, 5587, 5701, 5527, 5241, 5000, 5205, 4925, 4179, 4649, 4481, 4882, 4856, 4798, 4688, 4739, 4755, 4768, 4452, 4509, 4336, 4049, 3412, 3262, 3340, 3612, 3041, 3071, 3001, 3136, 3156, 3166, 2962, 3193, 3107, 3032, 2614, 2772, 2687, 2664, 2663, 2707, 2667, 2977, 2941, 2564]
                 }
             ]
