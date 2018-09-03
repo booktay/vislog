@@ -16,7 +16,7 @@ const styles = theme => ({
     },
 });
 
-class ChartWk1 extends React.Component {
+class ChartWk3 extends React.Component {
 
     getOption1 = () => {
         return {
@@ -294,38 +294,51 @@ class ChartWk1 extends React.Component {
 
     getOption6 = () => {
         return {
-            angleAxis: {
-                type: 'category',
-                data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
-                z: 10
+            title: {
+                text: '6. User activities chart'
             },
-            radiusAxis: {
+
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b}: {c} ({d}%)"
             },
-            polar: {
-            },
-            series: [{
-                type: 'bar',
-                data: [1, 2, 3, 4, 3, 5, 1],
-                coordinateSystem: 'polar',
-                name: 'A',
-                stack: 'a'
-            }, {
-                type: 'bar',
-                data: [2, 4, 6, 1, 3, 2, 1],
-                coordinateSystem: 'polar',
-                name: 'B',
-                stack: 'a'
-            }, {
-                type: 'bar',
-                data: [1, 2, 3, 4, 1, 2, 5],
-                coordinateSystem: 'polar',
-                name: 'C',
-                stack: 'a'
-            }],
             legend: {
-                show: true,
-                data: ['A', 'B', 'C']
-            }
+                orient: 'vertical',
+                x: 'right',
+                data: ['login-page', 'TIMEOUT', 'RE-LOGIN', 'logout-page'],
+            },
+            series: [
+                {
+                    name: 'User Activities',
+                    type: 'pie',
+                    radius: ['50%', '70%'],
+                    avoidLabelOverlap: false,
+                    label: {
+                        normal: {
+                            show: false,
+                            position: 'center'
+                        },
+                        emphasis: {
+                            show: true,
+                            textStyle: {
+                                fontSize: '30',
+                                fontWeight: 'bold'
+                            }
+                        }
+                    },
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    data: [
+                        { value: 3574, name: 'login-page' },
+                        { value: 3312, name: 'TIMEOUT' },
+                        { value: 229, name: 'RE-LOGIN' },
+                        { value: 22, name: 'logout-page' }
+                    ]
+                }
+            ]
         };
     }
 
@@ -371,8 +384,8 @@ class ChartWk1 extends React.Component {
     }
 }
 
-ChartWk1.propTypes = {
+ChartWk3.propTypes = {
     classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(ChartWk1);
+export default withStyles(styles)(ChartWk3);

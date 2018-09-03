@@ -21,9 +21,11 @@ const drawerWidth = 240;
 const styles = theme => ({
 	root: {
 		display: 'flex',
+		backgroundColor: '#37474F',
 	},
 	toolbar: {
 		paddingRight: 24, // keep right padding when drawer closed
+		backgroundColor: '#263238',
 	},
 	toolbarIcon: {
 		display: 'flex',
@@ -65,6 +67,7 @@ const styles = theme => ({
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.enteringScreen,
 		}),
+		backgroundColor: '#f5f5f5',
 	},
 	drawerPaperClose: {
 		overflowX: 'hidden',
@@ -76,6 +79,7 @@ const styles = theme => ({
 		[theme.breakpoints.up('sm')]: {
 			width: theme.spacing.unit * 9,
 		},
+		backgroundColor: '#FFFFFF',
 	},
 	appBarSpacer: theme.mixins.toolbar,
 	content: {
@@ -83,6 +87,7 @@ const styles = theme => ({
 		padding: theme.spacing.unit * 3,
 		height: '100vh',
 		overflow: 'auto',
+		backgroundColor: '#263238',
 	},
 	chartContainer: {
 		marginLeft: -22,
@@ -146,7 +151,7 @@ class App extends Component {
 						open={this.state.open}
 					>
 						<div className={classes.toolbarIcon}>
-							<Typography variant="subheading" color="inherit" noWrap className={classes.title}>
+							<Typography variant="h6" color="inherit" noWrap className={classes.title}>
 								2018-S1-01204427
                   			</Typography>
 							<IconButton onClick={this.handleDrawerClose}>
