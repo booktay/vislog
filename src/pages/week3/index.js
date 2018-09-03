@@ -36,6 +36,7 @@ class ChartWk3 extends React.Component {
         return {
             title: {
                 text: 'Users Timestamps',
+                subtext: 'Per 1 hour'
             },
             tooltip: {
                 trigger: 'axis',
@@ -105,7 +106,12 @@ class ChartWk3 extends React.Component {
                     data: [1, 1, 1, 1, 2, 1, 3, 3, 1, 6, 44, 144, 74,
                         38, 40, 26, 48, 115, 178, 368, 432, 426, 462, 539, 416, 524,
                         410, 388, 325, 417, 476, 399, 394, 272, 162],
-                }
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: 'Max' },
+                        ]
+                    },
+                },
             ]
         };
     };
@@ -113,7 +119,8 @@ class ChartWk3 extends React.Component {
     getOption2 = () => {
         return {
             title: {
-                text: 'IP Usage Timestamps'
+                text: 'IP Usage Timestamps',
+                subtext: 'Per 1 hour'
             },
             tooltip: {
                 trigger: 'axis'
@@ -155,18 +162,31 @@ class ChartWk3 extends React.Component {
                 {
                     name: 'IPv4',
                     type: 'line',
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: 'Max' },
+                        ]
+                    },
                     data: [0, 1, 1, 0, 1, 1, 1, 1, 1, 3, 25, 76, 34, 18, 22, 18, 18, 64, 106, 240, 246, 248, 243, 316, 246, 250, 240, 195, 192, 218, 278, 229, 231, 151, 86]
                 },
                 {
                     name: 'IPv6',
                     type: 'line',
-                    stack: '总量',
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: 'Max' },
+                        ]
+                    },
                     data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 4, 0, 0, 0, 2, 0, 0, 0, 0]
                 },
                 {
                     name: 'Dual Stack',
                     type: 'line',
-                    stack: '总量',
+                    markPoint: {
+                        data: [
+                            { type: 'max', name: 'Max' },
+                        ]
+                    },
                     data: [1, 0, 0, 1, 1, 0, 2, 2, 0, 3, 19, 68, 40, 20, 18, 8, 30, 51, 72, 128, 184, 176, 219, 223, 170, 274, 166, 193, 133, 199, 196, 170, 163, 121, 76]
                 }
             ]
@@ -192,8 +212,9 @@ class ChartWk3 extends React.Component {
                 {
                     name: 'IP Usages',
                     type: 'pie',
-                    radius: ['50%', '70%'],
+                    radius: ['40%', '80%'],
                     avoidLabelOverlap: false,
+                    // roseType: 'radius',
                     label: {
                         normal: {
                             show: false,
@@ -225,7 +246,8 @@ class ChartWk3 extends React.Component {
     getOption4 = () => {
         return {
             title: {
-                text: 'Login/Logout Timestamps'
+                text: 'Login/Logout Timestamps',
+                subtext: 'Per 1 hour'
             },
             brush: {
                 toolbox: ['rect', 'polygon', 'lineX', 'lineY', 'keep', 'clear'],
@@ -278,7 +300,8 @@ class ChartWk3 extends React.Component {
     getOption5 = () => {
         return {
             title: {
-                text: 'Agent IP (::ffff:158.108.218.XXX) Distribution'
+                text: 'Agent IP (::ffff:158.108.218.XXX) Distribution',
+                subtext: 'Per 1 hour'
             },
             angleAxis: {
                 type: 'category',
@@ -325,8 +348,9 @@ class ChartWk3 extends React.Component {
                 {
                     name: 'User Activities',
                     type: 'pie',
-                    radius: ['50%', '70%'],
+                    radius: ['40%', '70%'],
                     avoidLabelOverlap: false,
+                    // roseType: 'radius',
                     label: {
                         normal: {
                             show: false,

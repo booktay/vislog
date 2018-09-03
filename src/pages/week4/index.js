@@ -158,7 +158,8 @@ class ChartWk4 extends React.Component {
                     name: 'IP Usages',
                     type: 'pie',
                     radius: ['50%', '70%'],
-                    avoidLabelOverlap: false,
+                    avoidLabelOverlap: true,
+                    roseType: 'radius',
                     label: {
                         normal: {
                             show: false,
