@@ -147,12 +147,12 @@ class ChartWk1 extends React.Component {
         const { classes } = this.props;
         return (
             <React.Fragment >
-                <Card className={classes.card}>
+                <Card className={classes.card} id="indo">
                     <CardContent>
                         <ReactEcharts option={this.getOption1()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
                 </Card>
-                <Card className={classes.card}>
+                <Card className={classes.card} id="inter">
                     <CardContent>
                         <ReactEcharts option={this.getOption2()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>

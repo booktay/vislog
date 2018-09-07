@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 
 const styles = theme => ({
     root: {
@@ -17,7 +17,7 @@ const styles = theme => ({
     },
     button: {
         margin: theme.spacing.unit,
-        // display: 'list-item',
+        display: 'block',
     },
 });
 
@@ -39,21 +39,53 @@ function PaperSheet(props) {
             <div className={classes.plate}>
                 <Paper className={classes.root} elevation={1}>
                     <Typography variant="headline" component="h3">
-                        Assignment
+                        Assignment#1
                     </Typography>
                     <Typography variant="title" component="h3">
                         <Button color="primary" className={classes.button} component={Link} to="/assignment1">
-                            Assignment#1 Thailand Domistic & International Network
+                            Thailand Domistic Network
                         </Button>
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment1#inter">
+                            Thailand International Network
+                        </Button>
+                    </Typography>
+                </Paper>
+            </div>
+            <div className={classes.plate}>
+                <Paper className={classes.root} elevation={1}>
+                    <Typography variant="headline" component="h3">
+                        Assignment#2
                     </Typography>
                     <Typography variant="title" component="h3">
                         <Button color="primary" className={classes.button} component={Link} to="/assignment2">
-                            Assignment#2 Time series & Distribution Analysis
+                            Users Timestamps
+                        </Button>
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment2#iptime">
+                            IP Usage Timestamps
+                        </Button>
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment2#ipcir">
+                            IP Usage Chart
+                        </Button>
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment2#userac">
+                            User Activities Chart
+                        </Button>
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment2#logtime">
+                            Login/Logout Timestamps
+                        </Button>
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment2#agendis">
+                            Agent IP (::ffff:158.108.218.XXX) Distribution
                         </Button>
                     </Typography>
+                </Paper>
+            </div>
+            <div className={classes.plate}>
+                <Paper className={classes.root} elevation={1}>
+                    <Typography variant="headline" component="h3">
+                        Assignment#3
+                    </Typography>
                     <Typography variant="title" component="h3">
-                        <Button color="primary" className={classes.button} component={Link} to="/">
-                            Assignment#3 Weblog Analysis
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment3">
+                            Weblog Analysis
                         </Button>
                     </Typography>
                 </Paper>

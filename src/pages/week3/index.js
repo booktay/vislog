@@ -384,34 +384,34 @@ class ChartWk3 extends React.Component {
         const { classes } = this.props;
         return (
             <React.Fragment >
-                <Card className={classes.card}>
+                <Card className={classes.card} id="usertime">
                     <CardContent>
                         <ReactEcharts option={this.getOption1()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
                 </Card>
-                <Card className={classes.card}>
+                <Card className={classes.card} id="iptime">
                     <CardContent>
                         <ReactEcharts option={this.getOption2()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
                 </Card>
-                <div className={classes.divhalf}>
+                <div className={classes.divhalf} id="ipcir">
                     <Card className={classes.cardhalfright}>
                         <CardContent>
                             <ReactEcharts option={this.getOption3()} style={{ height: '34em', width: '100%' }} />
                         </CardContent>
                     </Card>
-                    <Card className={classes.cardhalf}>
+                    <Card className={classes.cardhalf} id="userac">
                         <CardContent>
                             <ReactEcharts option={this.getOption6()} style={{ height: '34em', width: '100%' }} />
                         </CardContent>
                     </Card>
                 </div>
-                <Card className={classes.card}>
+                <Card className={classes.card} id="logtime">
                     <CardContent>
                         <ReactEcharts option={this.getOption4()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>
                 </Card>
-                <Card className={classes.card}>
+                <Card className={classes.card} id="agendis">
                     <CardContent>
                         <ReactEcharts option={this.getOption5()} style={{ height: '34em', width: '100%' }} />
                     </CardContent>

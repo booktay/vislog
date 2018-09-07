@@ -21,11 +21,17 @@ export const menu = (
             </ListItemIcon>
             <ListItemText primary="Assignment2" />
         </ListItem>
-        <ListItem button component={Link} to="/assignment3">
+        <ListItem button component={Link} to="/assignment3-1">
             <ListItemIcon>
                 <ChartIcon />
             </ListItemIcon>
-            <ListItemText primary="Assignment3" />
+            <ListItemText primary="Assignment3-1" />
+        </ListItem>
+        <ListItem button component={Link} to="/assignment3-2">
+            <ListItemIcon>
+                <ChartIcon />
+            </ListItemIcon>
+            <ListItemText primary="Assignment3-2" />
         </ListItem>
     </div>
 );
