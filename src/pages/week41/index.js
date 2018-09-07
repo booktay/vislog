@@ -7,7 +7,6 @@ import ReactEcharts from 'echarts-for-react';
 import echarts from 'echarts';
 
 import data_2 from './data31_2.json';
-import data_32 from './data32';
 
 const styles = theme => ({
     title: {
