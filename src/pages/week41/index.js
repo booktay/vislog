@@ -119,6 +119,10 @@ class ChartWk4 extends React.Component {
 
     getOption3 = () => {
         return {
+            title: {
+                text: 'All request of Topmost user at 03.00AM',
+                left: 'left'
+            },
             parallelAxis: [
                 {
                     dim: 0,
