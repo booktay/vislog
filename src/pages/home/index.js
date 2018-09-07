@@ -84,8 +84,13 @@ function PaperSheet(props) {
                         Assignment#3
                     </Typography>
                     <Typography variant="title" component="h3">
-                        <Button color="primary" className={classes.button} component={Link} to="/assignment3">
-                            Weblog Analysis
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment3-1">
+                            Weblog Analysis Part 1
+                        </Button>
+                    </Typography>
+                    <Typography variant="title" component="h3">
+                        <Button color="primary" className={classes.button} component={Link} to="/assignment3-2">
+                            Weblog Analysis Part 2
                         </Button>
                     </Typography>
                 </Paper>
